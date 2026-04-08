@@ -16,10 +16,13 @@ spring:
     name: user-service
 
   eureka:
-    client:
-      registry-fetch-interval-seconds: 5
     instance:
       prefer-ip-address: true
       instance-id: ${spring.application.name}:${random.value}
+
+    client:
+      registry-fetch-interval-seconds: 5
+
+    instance:
       lease-renewal-interval-in-seconds: 5
       lease-expiration-duration-in-seconds: 10

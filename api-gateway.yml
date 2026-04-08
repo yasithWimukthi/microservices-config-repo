@@ -9,9 +9,12 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/users/**
-      loadbalancer:
-          retry:
-            enabled: true
+
+    loadbalancer:
+      health-check:
+        enabled: true
+      retry:
+        enabled: true
 
 eureka:
   client:
