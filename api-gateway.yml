@@ -17,6 +17,11 @@ spring:
         enabled: true
 
 eureka:
+  server:
+    # How often the eviction task runs (ms)
+    eviction-interval-timer-in-ms: 5000 
+    # Enable eviction
+    enable-self-preservation: false 
   client:
     service-url:
       defaultZone: http://host.docker.internal:8761/eureka
