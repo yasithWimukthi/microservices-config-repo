@@ -8,7 +8,7 @@ spring:
         - id: USER-SERVICE
           uri: lb://user-service
           predicates:
-            - Path=/users/**
+            - Path=/users,/users/**
 
     loadbalancer:
       health-check:
